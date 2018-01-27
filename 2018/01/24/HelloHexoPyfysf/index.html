@@ -18,7 +18,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://img.blog.csdn.net/20180115214152607?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcHlmeXNm/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20180115214625251?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcHlmeXNm/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2018-01-25T01:03:10.418Z">
+<meta property="og:updated_time" content="2018-01-27T06:50:50.355Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HelloHexoPyfysf">
 <meta name="twitter:description" content="实现效果">
@@ -63,15 +63,17 @@
 			
 				<li><a href="/">Home</a></li>
 	        
-				<li><a href="/android/">Android</a></li>
+				<li><a href="/tags/android/">Android</a></li>
 	        
-				<li><a href="/java/">Java</a></li>
+				<li><a href="/tags/java/">Java</a></li>
 	        
-				<li><a href="/exception/">Exception</a></li>
+				<li><a href="/tags/exception/">Exception</a></li>
 	        
-				<li><a href="/reprint/">Reprint</a></li>
+				<li><a href="/tags/reprint/">Reprint</a></li>
 	        
-				<li><a href="/ide-config/">IDE-Config</a></li>
+				<li><a href="/tags/ide-config/">IDE-Config</a></li>
+	        
+				<li><a href="/archives">archives</a></li>
 	        
 			</ul>
 		</nav>
@@ -137,6 +139,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -155,17 +159,19 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 16.666666666666668%"><a href="/">Home</a></li>
+					<li style="width: 14.285714285714286%"><a href="/">Home</a></li>
 		        
-					<li style="width: 16.666666666666668%"><a href="/android/">Android</a></li>
+					<li style="width: 14.285714285714286%"><a href="/tags/android/">Android</a></li>
 		        
-					<li style="width: 16.666666666666668%"><a href="/java/">Java</a></li>
+					<li style="width: 14.285714285714286%"><a href="/tags/java/">Java</a></li>
 		        
-					<li style="width: 16.666666666666668%"><a href="/exception/">Exception</a></li>
+					<li style="width: 14.285714285714286%"><a href="/tags/exception/">Exception</a></li>
 		        
-					<li style="width: 16.666666666666668%"><a href="/reprint/">Reprint</a></li>
+					<li style="width: 14.285714285714286%"><a href="/tags/reprint/">Reprint</a></li>
 		        
-					<li style="width: 16.666666666666668%"><a href="/ide-config/">IDE-Config</a></li>
+					<li style="width: 14.285714285714286%"><a href="/tags/ide-config/">IDE-Config</a></li>
+		        
+					<li style="width: 14.285714285714286%"><a href="/archives">archives</a></li>
 		        
 				</ul>
 			</nav>
@@ -198,6 +204,38 @@
         
       </header>
     
+
+
+    <!-- 目录内容 -->
+    
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+      <span class="btn-bg"></span>
+      <span class="btn-text">文章导航</span>
+    </p>
+    <div id="toc-article" class="toc-article">
+      <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+      <strong class="toc-title">文章目录</strong>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#实现效果"><span class="toc-number">1.</span> <span class="toc-text">实现效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#需求"><span class="toc-number">2.</span> <span class="toc-text">需求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实现思路"><span class="toc-number">3.</span> <span class="toc-text">实现思路</span></a></li></ol>
+    </div>
+    <script type="text/javascript">
+      function showToc(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:block");
+        show_toc_btn.setAttribute("style","display:none");
+      };
+      function showBtn(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:none");
+        show_toc_btn.setAttribute("style","display:block");
+      };
+    </script>
+    
+    <!-- 目录内容结束 -->
+
+
+
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h3><p><img src="http://img.blog.csdn.net/20180115214152607?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcHlmeXNm/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="实现效果"><br><a id="more"></a></p>
@@ -375,13 +413,26 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#实现效果"><span class="toc-number">1.</span> <span class="toc-text">实现效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#需求"><span class="toc-number">2.</span> <span class="toc-text">需求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实现思路"><span class="toc-number">3.</span> <span class="toc-text">实现思路</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
 
 
   
-  
+
   
 
   
@@ -495,11 +546,35 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">apk2sf</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">往事随风</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">apk2sf</a>
+                <a href="javascript:void(0)" class="js-tag color3">Android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">exception</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">reprint</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">ide-config</a>
               </li>
             
             <div class="clearfix"></div>
